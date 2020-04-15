@@ -90,9 +90,9 @@ public class MyntraShopping {
 		driver.findElement(By.className("results-base"));
 		
 		/*10) Confirm all the Coats are of brand MANGO
-    	findElements (brand) -> List<WebElement> 
-    	foreach -> getText of each brand 
-    	compare > if(condition)
+    		findElements (brand) -> List<WebElement> 
+    		foreach -> getText of each brand 
+    		compare > if(condition)
 		 */
 		
 		List<WebElement>brandList = driver.findElements(By.tagName("h3"));
@@ -114,8 +114,8 @@ public class MyntraShopping {
 		Thread.sleep(3000);
 		
 		/*12) Find the price of first displayed item
-     	findElements (price) -> List<WebElement> 
-     	get(0) -> WebElement -> getText -> String -> int
+     		findElements (price) -> List<WebElement> 
+     		get(0) -> WebElement -> getText -> String -> int
 		 */
 		
 		List<WebElement> price = driver.findElementsByXPath("(//ul[@class='results-base']//span[@class='product-discountedPrice'])[1]");
