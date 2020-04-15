@@ -13,10 +13,10 @@ public class MyntraShopping {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		ChromeOptions disablenot = new ChromeOptions();
-		disablenot.addArguments("Notification is Disabled");		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");			
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		ChromeDriver driver = new ChromeDriver();
+		ChromeDriver driver = new ChromeDriver(options);
 		
 		//1) Open https://www.myntra.com/
 		
