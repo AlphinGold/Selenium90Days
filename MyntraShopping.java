@@ -87,7 +87,6 @@ public class MyntraShopping {
 		
 		driver.findElementByXPath("//span[@class='myntraweb-sprite FilterDirectory-close sprites-remove']").click();
 		Thread.sleep(1000);
-		driver.findElement(By.className("results-base"));
 		
 		/*10) Confirm all the Coats are of brand MANGO
     		findElements (brand) -> List<WebElement> 
@@ -95,6 +94,7 @@ public class MyntraShopping {
     		compare > if(condition)
 		 */
 		
+		driver.findElement(By.className("results-base"));
 		List<WebElement>brandList = driver.findElements(By.tagName("h3"));
 		for(WebElement eleBrand : brandList) {
 			String name = eleBrand.getText();
